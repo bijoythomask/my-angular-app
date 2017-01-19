@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import {MdDialog, MdDialogRef, MdSnackBar} from '@angular/material';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
+  //selector: 'app-dialog',
+  templateUrl: 'app.dialog.html',
   styleUrls: ['app.component.css']
 })
-export class AppComponent {
+export class DialogComponent {
  isDarkTheme: boolean = false;
   lastDialogResult: string;
 
@@ -61,8 +61,6 @@ export class AppComponent {
 })
 export class DialogContent {
   constructor(@Optional() public dialogRef: MdDialogRef<DialogContent>) { }
-
-  
 
 
 }

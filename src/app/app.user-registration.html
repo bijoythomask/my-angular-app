@@ -1,0 +1,45 @@
+<form (ngSubmit)="saveUser()" #userForm="ngForm">
+
+    <md-card class="app-input-section">
+
+      <md-input placeholder="First name" [(ngModel)]="user.firstName" name="firstName" #firstName="ngModel" required> </md-input>
+
+      <md-input placeholder="Last name" [(ngModel)]="user.lastName" name="lastName" #lastName="ngModel"> </md-input>
+
+    </md-card>
+
+    <md-card class="app-input-section">
+
+      <md-input #address placeholder="Address" maxlength="200" [(ngModel)]="user.address" name="address" >
+        <md-hint align="end">
+          {{address.characterCount}} / 200
+        </md-hint>
+      </md-input>
+
+      <md-input placeholder="pincode" [(ngModel)]="user.pincode" name="pincode" #pincode="ngModel"> </md-input>
+
+    </md-card>
+
+    <md-card class="app-input-section">
+
+      <md-input placeholder="Phone" [(ngModel)]="user.phone" name="phone">
+        <span md-prefix>
+          <i class="material-icons app-input-icon">android</i>
+        </span>
+      </md-input>
+
+      <md-input placeholder="Motorcycle model">
+        <span md-prefix>
+          <i class="material-icons app-input-icon">motorcycle</i>
+          &nbsp;
+        </span>
+      </md-input>
+      
+        <!--<md-slider></md-slider>-->
+      
+    </md-card>  
+    <md-card>
+        <button md-raised-button color="primary" [disabled]="!userForm.form.valid">Save</button>
+    </md-card>
+
+</form>
