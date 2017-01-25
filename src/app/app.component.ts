@@ -60,9 +60,9 @@ export class AppComponent {
   `,
 })
 export class DialogContent {
-  constructor(@Optional() public dialogRef: MdDialogRef<DialogContent>) { }
 
+  constructor(@Optional() public dialogRef: MdDialogRef<DialogContent>) { 
+
+  }
   
-
-
 }

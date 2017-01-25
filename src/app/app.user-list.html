@@ -1,4 +1,16 @@
 <h3>user list</h3>
-<md-list *ngFor="let user of users">
-   <md-list-item> {{user.firstName}} </md-list-item>
-</md-list>
+<md-nav-list >
+    <md-list-item *ngFor="let user of users"> 
+
+        <button md-icon-button (click)="showInfo(link)">
+            <md-icon>info</md-icon>
+        </button>
+       
+        <a md-line href="...">{{user.firstName}}</a>
+
+        <button md-icon-button (click)="gotoDetails()">
+            <md-icon>edit</md-icon>
+        </button>        
+
+    </md-list-item>
+</md-nav-list>

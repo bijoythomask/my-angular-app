@@ -12,12 +12,13 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AppComponent , DialogContent} from './app.component';
 import { UserListComponent} from './app.user-list.component'
 import { UserRegistrationComponent} from './app.user-registration.component';
+import { UserEditComponent} from './app.user-edit.component';
 import { UserService} from './app.user.service';
 import { DialogComponent } from './app.dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent, DialogContent, UserRegistrationComponent, UserListComponent, DialogComponent
+    AppComponent, DialogContent, UserRegistrationComponent, UserEditComponent,UserListComponent, DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +29,7 @@ import { DialogComponent } from './app.dialog.component';
     RouterModule.forRoot([
       { path: 'user-registration', component: UserRegistrationComponent },
       { path: 'user-list', component: UserListComponent },
+      { path: 'user-edit', component: UserEditComponent },
       { path: 'app-dialog', component: DialogComponent },
       { path: '', component: UserListComponent }
     ])

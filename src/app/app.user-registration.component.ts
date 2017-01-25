@@ -7,7 +7,7 @@ import { UserService } from './app.user.service';
 
 @Component({
     //selector: 'user-registration',
-    templateUrl:'app.user-registration.html',
+    templateUrl:'app.user-registration.html'
      
 })
 export class UserRegistrationComponent implements OnInit {
