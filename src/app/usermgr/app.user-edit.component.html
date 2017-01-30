@@ -1,0 +1,40 @@
+<md-card  *ngIf="user" >
+   
+    <h2> Hello {{user.lastName}}, {{user.firstName}}  welcome</h2>
+
+</md-card>
+
+<form (ngSubmit)="updateUser()" #userForm="ngForm" *ngIf="user">
+    
+    <md-card class="app-input-section">
+
+      <md-input #address placeholder="Address" maxlength="200" [(ngModel)]="user.address" name="address" >
+        <md-hint align="end">
+          {{address.characterCount}} / 200
+        </md-hint>
+      </md-input>
+
+      <md-input placeholder="pincode" [(ngModel)]="user.pincode" name="pincode" #pincode="ngModel"> </md-input>
+
+    </md-card>
+
+    <md-card class="app-input-section">
+
+      <md-input placeholder="Phone" [(ngModel)]="user.phone" name="phone">
+        <span md-prefix>
+          <i class="material-icons app-input-icon">phone</i>
+        </span>
+      </md-input>
+
+      <md-input placeholder="Address" [(ngModel)]="user.address" name="address">
+        <span md-prefix>
+          <i class="material-icons app-input-icon">explore</i>
+        </span>
+      </md-input>
+      
+    </md-card>  
+    <md-card>
+        <button md-raised-button color="primary" [disabled]="!userForm.form.valid">Update</button>
+    </md-card>
+
+</form>

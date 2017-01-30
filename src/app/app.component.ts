@@ -33,7 +33,7 @@ export class AppComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       this.lastDialogResult = result;
-    })
+    });
   }
 
   showSnackbar() {
@@ -41,7 +41,7 @@ export class AppComponent {
   }
 
   gotoNewUser(): void {
-    this.router.navigate(['/user-registration'])
+    this.router.navigate(['user/registration'])
   }
 
 }

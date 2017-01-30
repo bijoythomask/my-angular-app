@@ -10,15 +10,13 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent , DialogContent} from './app.component';
-import { UserListComponent} from './app.user-list.component'
-import { UserRegistrationComponent} from './app.user-registration.component';
-import { UserEditComponent} from './app.user-edit.component';
-import { UserService} from './app.user.service';
+
 import { DialogComponent } from './app.dialog.component';
+import { UsermgrModule } from './usermgr';
 
 @NgModule({
   declarations: [
-    AppComponent, DialogContent, UserRegistrationComponent, UserEditComponent,UserListComponent, DialogComponent
+    AppComponent, DialogContent, DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -27,15 +25,12 @@ import { DialogComponent } from './app.dialog.component';
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     MaterialModule.forRoot(),
     RouterModule.forRoot([
-      { path: 'user-registration', component: UserRegistrationComponent },
-      { path: 'user-list', component: UserListComponent },
-      { path: 'user-edit', component: UserEditComponent },
       { path: 'app-dialog', component: DialogComponent },
-      { path: '', component: UserListComponent }
-    ])
+      { path: 'user', redirectTo: '/usermgr'}
+    ]),
+    UsermgrModule
   ],
-  
-  providers: [UserService],
+  providers: [],
   entryComponents: [DialogContent],
   bootstrap: [AppComponent]
 })
