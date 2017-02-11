@@ -6,7 +6,7 @@
 
 <form (ngSubmit)="updateUser()" #userForm="ngForm" *ngIf="user">
     
-    <md-card class="app-input-section">
+    <md-card class="app-input-section, app-card" >
 
       <md-input #address placeholder="Address" maxlength="200" [(ngModel)]="user.address" name="address" >
         <md-hint align="end">
@@ -18,22 +18,22 @@
 
     </md-card>
 
-    <md-card class="app-input-section">
+    <md-card class="app-input-section, app-card" >
 
       <md-input placeholder="Phone" [(ngModel)]="user.phone" name="phone">
         <span md-prefix>
-          <i class="material-icons app-input-icon">phone</i>
+          <i class="material-icons app-input-icon">phone</i>&nbsp;
         </span>
       </md-input>
 
       <md-input placeholder="Address" [(ngModel)]="user.address" name="address">
         <span md-prefix>
-          <i class="material-icons app-input-icon">explore</i>
+          <i class="material-icons app-input-icon">group_work</i>&nbsp;          
         </span>
       </md-input>
       
     </md-card>  
-    <md-card>
+    <md-card style="margin-top:20px ">
         <button md-raised-button color="primary" [disabled]="!userForm.form.valid">Update</button>
     </md-card>
 

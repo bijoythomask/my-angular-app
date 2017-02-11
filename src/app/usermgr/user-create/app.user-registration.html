@@ -1,6 +1,6 @@
 <form (ngSubmit)="saveUser()" #userForm="ngForm">
 
-    <md-card class="app-input-section">
+    <md-card class="app-input-section, app-card">
 
       <md-input placeholder="First name" [(ngModel)]="user.firstName" name="firstName" #firstName="ngModel" required> </md-input>
 
@@ -26,7 +26,7 @@
     <md-card class="app-input-section">
           <md-input placeholder="PinCode" name="pincode" [(ngModel)]="user.picode">
             <span md-prefix>
-              <i class="material-icons app-input-icon">pincode</i>
+              <i class="material-icons app-input-icon">explore</i>
               &nbsp;
             </span>
           </md-input>
@@ -34,7 +34,7 @@
 
 
     
-    <md-card>
+    <md-card >
         <button md-raised-button color="primary" [disabled]="!userForm.form.valid">Save</button>
     </md-card>
 

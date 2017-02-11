@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserListComponent } from './app.user-list.component'
-import { UserRegistrationComponent } from './app.user-registration.component';
-import { UserEditComponent } from './app.user-edit.component';
+import { UserListComponent } from './user-list/app.user-list.component'
+import { UserRegistrationComponent } from './user-create/app.user-registration.component';
+import { UserEditComponent } from './user-edit/app.user-edit.component';
 import { UserService } from './app.user.service';
 
 const routes: Routes = [

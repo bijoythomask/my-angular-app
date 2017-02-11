@@ -3,14 +3,14 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { User } from './user';
-import { UserService } from './app.user.service';
+import { User } from '../user';
+import { UserService } from '../app.user.service';
 
 import 'rxjs/add/operator/switchMap';
 
 @Component({
     // selector: 'app.user-edit',
-    templateUrl: 'app.user-edit.component.html'
+    templateUrl: 'app.user-edit.component.html',
 })
 export class UserEditComponent implements OnInit {
 

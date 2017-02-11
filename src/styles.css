@@ -2,3 +2,11 @@
 body {
   margin: 0;
 }
+
+.app-card {
+  margin: 20px;
+}
+
+.app-input-section{
+  margin: 20px;
+}

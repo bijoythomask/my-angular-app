@@ -6,8 +6,8 @@
     <h3>Material App Navigation</h3>
     <md-nav-list >
       <a md-list-item routerLink="/user" routerLinkActive="active" > Home </a>
+      <a md-list-item routerLink="/order" routerLinkActive="active" > Order </a>
       <a md-list-item routerLink="/user/registration" routerLinkActive="active" > User Registration </a>
-      <a md-list-item routerLink="/app-dialog" routerLinkActive="active" > Dialog </a>
     </md-nav-list>
     <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
    
@@ -34,5 +34,5 @@
 </md-sidenav-layout>
 
 <span class="app-action" [class.m2app-dark]="isDarkTheme">
-  <button md-fab (click)="gotoNewUser()" ><md-icon>add</md-icon></button>
+  <button md-fab (click)="gotoNewUser()"><md-icon>add</md-icon></button>
 </span>
