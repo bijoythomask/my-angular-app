@@ -2,13 +2,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch firefox localhost",
-      "type": "firefox",
-      "request": "launch",
-      "url": "http://localhost:4200/index.html",
-      "webRoot": "${workspaceRoot}"
-    },
-    {
       "name": "Launch chrome with sourcemaps",
       "type": "chrome",
       "request": "launch",

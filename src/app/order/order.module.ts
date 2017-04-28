@@ -6,6 +6,7 @@ import { MaterialModule } from '@angular/material';
 import { OrderComponent } from './order.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { OrderService } from './shared/order.service';
+import { OrderEditComponent } from './order-edit/order-edit.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import { OrderService } from './shared/order.service';
     MaterialModule,
     OrderRoutingModule
   ],
-  declarations: [OrderComponent, OrderListComponent],
+  declarations: [OrderComponent, OrderListComponent, OrderEditComponent],
   providers : [ OrderService ]
 })
 export class OrderModule { }
